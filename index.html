@@ -1,190 +1,151 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Rebeca Rávila | Social Media & Branding</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-<style>
-*{margin:0;padding:0;box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{
-    font-family:'Inter',sans-serif;
-    background:#f8f5f2;
-    color:#2b2220;
-    line-height:1.7;
-    overflow-x:hidden;
-}
-header{position:fixed;top:0;left:0;width:100%;display:flex;justify-content:space-between;align-items:center;padding:18px 7%;background:rgba(248,245,242,.92);backdrop-filter:blur(14px);z-index:999}
-header h2{font-family:"Cormorant Garamond",serif;color:#6b1216;font-size:2rem}
-nav{display:flex;gap:24px;flex-wrap:wrap}
-nav a{text-decoration:none;color:#4b2b2b;font-weight:600}
-section{padding:90px 7%}
-.hero{padding-top:150px;display:grid;grid-template-columns:1.1fr .9fr;gap:50px;align-items:center;min-height:100vh}
-.tag{display:inline-block;background:#ead7d2;color:#6b1216;padding:8px 18px;border-radius:50px;font-weight:700}
-h1{font-family:"Cormorant Garamond",serif;font-size:4rem;line-height:1.05;margin:24px 0}
-.hero p{font-size:1.1rem;color:#5d504c}
-.btn{display:inline-block;margin-top:35px;padding:16px 32px;background:#6b1216;color:#fff;text-decoration:none;border-radius:999px;font-weight:700;transition:.3s}
-.btn:hover{transform:translateY(-4px)}
-.hero{
-    padding-top:150px;
-    display:grid;
-    grid-template-columns:1.1fr .9fr;
-    gap:50px;
-    align-items:center;
-    min-height:100vh;
-    position:relative;
-}
+    <html lang="pt-BR">
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Branding, Social Media e Posicionamento Estratégico para mulheres empreendedoras.">
+    <title>Rebeca Rávila | Branding & Social Media</title>
 
-.hero::after{
-    content:"";
-    position:absolute;
-    right:-120px;
-    top:50%;
-    transform:translateY(-50%);
-    width:520px;
-    height:520px;
-    background:radial-gradient(circle,
-        rgba(255,255,255,.65) 0%,
-        rgba(255,255,255,0) 70%);
-    filter:blur(70px);
-    pointer-events:none;
-}
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-.hero img{
-    width:100%;
-    max-width:500px;
-    aspect-ratio:4/5;
-    object-fit:cover;
-    object-position:center;
-    border-radius:32px;
-    filter:brightness(1.12) contrast(.90) saturate(.92);
-    box-shadow:0 30px 80px rgba(0,0,0,.15);
-    transition:.5s ease;
-}
+    <style>
+    :root{
+    --wine:#6b1216;
+    --bg:#f8f5f2;
+    --text:#2b2220;
+    --muted:#6b625f;
+    --white:#fff;
+    --shadow:0 20px 45px rgba(0,0,0,.08);
+    }
+    *{margin:0;padding:0;box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{font-family:Inter,sans-serif;background:linear-gradient(#faf7f5,#f5f1ee);color:var(--text);line-height:1.7}
+    header{position:fixed;top:0;width:100%;display:flex;justify-content:space-between;align-items:center;padding:18px 7%;background:rgba(248,245,242,.92);backdrop-filter:blur(18px);box-shadow:0 8px 20px rgba(0,0,0,.05);z-index:999}
+    .logo{font-family:"Cormorant Garamond",serif;font-size:2rem;color:var(--wine);font-weight:700}
+    nav{display:flex;gap:28px}
+    nav a{text-decoration:none;color:var(--text);font-weight:600;position:relative}
+    nav a:after{content:"";position:absolute;left:0;bottom:-5px;width:0;height:2px;background:var(--wine);transition:.3s}
+    nav a:hover:after{width:100%}
+    section{padding:100px 8%}
+    .hero{display:grid;grid-template-columns:1.1fr .9fr;gap:60px;align-items:center;min-height:100vh}
+    .tag{display:inline-block;padding:8px 18px;background:#ead7d2;color:var(--wine);border-radius:999px;font-weight:700}
+    h1,h2{font-family:"Cormorant Garamond",serif}
+    h1{font-size:4rem;line-height:1.05;margin:25px 0}
+    p{color:var(--muted)}
+    .btn{display:inline-block;margin-top:30px;padding:16px 32px;background:var(--wine);color:#fff;text-decoration:none;border-radius:999px;box-shadow:0 12px 30px rgba(107,18,22,.35);transition:.3s}
+    .btn:hover{transform:translateY(-4px)}
+    .hero img{width:100%;max-width:500px;border-radius:30px;box-shadow:var(--shadow)}
+    .stats{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:35px}
+    .stat{background:#fff;border-radius:20px;padding:18px;text-align:center;box-shadow:var(--shadow)}
+    .section-title{text-align:center;font-size:3rem;color:var(--wine);margin-bottom:18px}
+    .lead{max-width:850px;margin:auto;text-align:center}
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:28px;margin-top:45px}
+    .card{background:#fff;padding:35px;border-radius:24px;box-shadow:var(--shadow);transition:.3s}
+    .card:hover{transform:translateY(-8px)}
+    .card h3{font-size:1.7rem;color:var(--wine);margin-bottom:12px}
+    .timeline{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:24px}
+    .step{background:#fff;border-radius:20px;padding:30px;box-shadow:var(--shadow);text-align:center}
+    .testimonials{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px}
+    .quote{background:#fff;border-left:5px solid var(--wine);padding:28px;border-radius:18px;box-shadow:var(--shadow)}
+    .faq details{background:#fff;margin:15px 0;padding:18px;border-radius:15px;box-shadow:var(--shadow)}
+    .cta{text-align:center;background:var(--wine);color:#fff;border-radius:30px}
+    .cta p{color:#f7efef}
+    footer{text-align:center;padding:40px;color:#777}
+    .whats{position:fixed;right:22px;bottom:22px;width:62px;height:62px;border-radius:50%;background:#25D366;color:#fff;text-decoration:none;display:flex;align-items:center;justify-content:center;font-size:30px}
+    @media(max-width:900px){
+    .hero{grid-template-columns:1fr;text-align:center}
+    nav{display:none}
+    h1{font-size:2.8rem}
+    .stats{grid-template-columns:1fr}
+    }
+    </style>
+    </head>
+    <body>
 
-.hero img:hover{
-    transform:scale(1.02);
-}
-h2.section-title{font-family:"Cormorant Garamond",serif;font-size:3rem;color:#6b1216;margin-bottom:20px}
-.lead{max-width:850px;color:#655754}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:28px;margin-top:45px}
-.card{background:#fff;border-radius:22px;padding:35px;box-shadow:0 15px 35px rgba(0,0,0,.07)}
-.card h3{font-family:"Cormorant Garamond",serif;font-size:2rem;color:#6b1216;margin-bottom:15px}
-.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:24px}
-.stat{background:#6b1216;color:#fff;padding:35px;border-radius:20px;text-align:center}
-.stat h3{font-size:2.5rem;font-family:"Cormorant Garamond",serif}
-.cta{background:#6b1216;color:#fff;border-radius:28px;text-align:center}
-.cta h2{font-family:"Cormorant Garamond",serif;font-size:3rem}
-footer{text-align:center;padding:40px;color:#777}
-.whats{position:fixed;right:20px;bottom:20px;background:#25D366;color:#fff;width:62px;height:62px;border-radius:50%;display:flex;align-items:center;justify-content:center;text-decoration:none;font-size:28px;box-shadow:0 10px 30px rgba(0,0,0,.2)}
-@media(max-width:900px){
-header{flex-direction:column;gap:14px}
-.hero{grid-template-columns:1fr;text-align:center}
-h1{font-size:2.8rem}
-.hero img{max-width:380px;margin:auto}
-.btn{display:block;max-width:320px;margin:35px auto 0}
-section{padding:70px 6%}
-}
-</style>
-</head>
-<body>
+    <header>
+    <div class="logo">Rebeca Rávila</div>
+    <nav>
+    <a href="#sobre">Sobre</a>
+    <a href="#servicos">Serviços</a>
+    <a href="#metodo">Método</a>
+    <a href="#depoimentos">Depoimentos</a>
+    <a href="#faq">FAQ</a>
+    <a href="#contato">Contato</a>
+    </nav>
+    </header>
 
-<header>
-<h2>Rebeca Rávila</h2>
-<nav>
-<a href="#sobre">Sobre</a>
-<a href="#servicos">Serviços</a>
-<a href="#processo">Processo</a>
-<a href="#contato">Contato</a>
-</nav>
-</header>
+    <section class="hero">
+    <div>
+    <span class="tag">Branding • Social Media • Posicionamento</span>
+    <h1>Sua marca pode vender antes mesmo da primeira conversa.</h1>
+    <p>Transformo perfis comuns em marcas elegantes, memoráveis e estrategicamente posicionadas para conquistar confiança e atrair clientes.</p>
+    <div class="stats">
+    <div class="stat"><strong>+250</strong><br>Perfis transformados</div>
+    <div class="stat"><strong>+5 anos</strong><br>de experiência</div>
+    <div class="stat"><strong>100%</strong><br>Estratégias personalizadas</div>
+    </div>
+    <a class="btn" href="#contato">Quero fortalecer minha marca</a>
+    </div>
 
-<section class="hero">
-<div>
-<span class="tag">Social Media • Branding • Estratégia</span>
-<h1>Marcas fortes não nascem por acaso.</h1>
-<p>Olá! Sou <strong>Rebeca Rávila</strong>. Ajudo mulheres empreendedoras a transformarem seus perfis em marcas elegantes, estratégicas e memoráveis. Meu trabalho une branding, design e posicionamento para atrair clientes e transmitir confiança.</p>
-<a class="btn" target="_blank" href="https://wa.me/556391297243?text=Oi%20Rebeca!%20Quero%20fortalecer%20minha%20marca.">Quero fortalecer minha marca</a>
-</div>
-<img src="sua-foto.jpeg" alt="Rebeca Rávila">
-</section>
+    <img src="sua-foto.jpeg" alt="Rebeca Rávila">
+    </section>
 
-<section id="sobre">
-<h2 class="section-title">Quem é a Rebeca?</h2>
-<p class="lead">Prazer! Eu sou a Rebeca Rávila.
+    <section id="sobre">
+    <h2 class="section-title">Quem está por trás da marca?</h2>
+    <p class="lead">Sou Rebeca Rávila. Acredito que toda empresa nasce de um propósito e merece uma comunicação capaz de transmitir confiança, profissionalismo e valor. Meu trabalho une branding, estratégia, design e sensibilidade para transformar marcas em referências no seu mercado.</p>
+    </section>
 
-Mais do que Social Media, sou apaixonada por pessoas, comunicação e pelo propósito que existe por trás de cada negócio.
-Acredito que toda empresa nasce de um sonho e merece ser apresentada ao mundo com verdade, estratégia e beleza.
-Minha fé em Deus é o alicerce de tudo o que faço. É ela que me ensina a servir com excelência, agir com honestidade e cuidar de cada projeto como se fosse meu.
-Ao longo da minha trajetória, descobri que meu trabalho vai muito além de criar posts. Eu ajudo empreendedoras a enxergarem o valor da própria marca, organizarem sua comunicação e construírem uma presença digital que transmita confiança, profissionalismo e autoridade.
-Meu diferencial está em unir estratégia, branding, design e sensibilidade. Antes de pensar em cores, fontes ou publicações, procuro entender quem é a pessoa por trás da empresa, quais são seus objetivos e qual história sua marca deseja contar.
-Cada perfil que passa pelas minhas mãos recebe um olhar único, porque acredito que nenhuma empresa deveria parecer igual à outra.
-Meu propósito é fazer com que sua marca seja lembrada, admirada e reconhecida pelo valor que ela realmente possui.</p>
-</section>
+    <section id="servicos">
+    <h2 class="section-title">Serviços</h2>
+    <div class="grid">
+    <div class="card"><h3>📱 Gestão de Instagram</h3><p>Planejamento, conteúdo, design, stories e acompanhamento.</p></div>
+    <div class="card"><h3>🎨 Branding</h3><p>Posicionamento, identidade visual, arquétipos e tom de voz.</p></div>
+    <div class="card"><h3>💻 Design</h3><p>Feed, apresentações, materiais gráficos e peças digitais.</p></div>
+    <div class="card"><h3>💡 Consultoria</h3><p>Encontros estratégicos para acelerar seu posicionamento.</p></div>
+    <div class="card"><h3>🎥 StoryMaker</h3><p>Cobertura estratégica de eventos em tempo real.</p></div>
+    <div class="card"><h3>✨ Remodelação de Perfil</h3><p>Transformação completa do Instagram profissional.</p></div>
+    </div>
+    </section>
 
-<section id="servicos">
-<h2 class="section-title">Serviços</h2>
-<div class="grid">
-<div class="card"><h3>Gestão de Instagram</h3><p>Planejamento, calendário editorial, design, legendas, stories e análise de métricas.</p></div>
-<div class="card"><h3>Branding</h3><p>Posicionamento estratégico, Tom de voz, Arquétipos, Personalidade da marca, Nova identidade visual premium, Reposicionamento da empresa</p></div>
-<div class="card"><h3>Design</h3><p>Feed premium, templates, apresentações e materiais gráficos.</p></div>
-<div class="card"><h3>Consultoria</h3><p>Direcionamento estratégico para empreendedoras que desejam crescer nas redes.</p></div>
-<div class="card"><h3>StoryMaker</h3><p>Registro o seu evento em tempo real, transformando cada momento em uma sequência estratégica de stories que transmite a essência da ocasião. Enquanto você aproveita o evento, eu cuido da captação de imagens, vídeos e da publicação dos conteúdos, criando uma cobertura dinâmica, profissional e alinhada à identidade da sua marca. Ideal para inaugurações, lançamentos, eventos corporativos, casamentos, workshops e outras ocasiões especiais.</p></div>
-<div class="card"><h3>Remodelação de Perfil</h3><p>Transformação completa do seu Instagram com estratégia, organização e posicionamento premium. Remodelação do perfil profissional; Bio estratégica; Capas personalizadas para destaques; Organização do feed; Nova identidade visual premium; Perfil pensado para transmitir autoridade, gerar confiança e vender mais.</p></div>
+    <section id="metodo">
+    <h2 class="section-title">Meu método</h2>
+    <div class="timeline">
+    <div class="step">☕<h3>Conversa</h3><p>Entendo sua história e objetivos.</p></div>
+    <div class="step">📋<h3>Estratégia</h3><p>Planejamento personalizado.</p></div>
+    <div class="step">🎨<h3>Identidade</h3><p>Construção da comunicação visual.</p></div>
+    <div class="step">📈<h3>Crescimento</h3><p>Acompanhamento e evolução constante.</p></div>
+    </div>
+    </section>
 
-</div>
-</section>
+    <section id="depoimentos">
+    <h2 class="section-title">O que minhas clientes dizem</h2>
+    <div class="testimonials">
+    <div class="quote">“Meu perfil finalmente transmite profissionalismo e comecei a receber mais contatos.”</div>
+    <div class="quote">“A estratégia da Rebeca mudou completamente a percepção da minha marca.”</div>
+    <div class="quote">“Foi muito além de posts. Descobri o valor da minha empresa.”</div>
+    </div>
+    </section>
 
-<section id="processo">
-<h2 class="section-title">Como funciona</h2>
-<div class="grid">
-<div class="card"><h3>1. Diagnóstico</h3><p>Entendimento do negócio, público e objetivos.</p></div>
-<div class="card"><h3>2. Estratégia</h3><p>Planejamento personalizado para a marca.</p></div>
-<div class="card"><h3>3. Produção</h3><p>Criação de conteúdo e identidade visual.</p></div>
-<div class="card"><h3>4. Crescimento</h3><p>Acompanhamento dos resultados e otimizações.</p></div>
-</div>
-</section>
+    <section id="faq" class="faq">
+    <h2 class="section-title">Perguntas frequentes</h2>
+    <details><summary>Você atende online?</summary><p>Sim, clientes de qualquer lugar do Brasil.</p></details>
+    <details><summary>Você faz apenas identidade visual?</summary><p>Sim. Também ofereço branding e remodelação.</p></details>
+    <details><summary>Como solicitar um orçamento?</summary><p>Pelo WhatsApp.</p></details>
+    </section>
 
-<section>
+    <section class="cta" id="contato">
+    <h2>Sua marca merece ser lembrada.</h2>
+    <p>Vamos construir uma presença digital elegante, estratégica e memorável.</p>
+    <a class="btn" style="background:#fff;color:#6b1216" href="https://wa.me/556391297243">Falar comigo</a>
+    </section>
 
-<div class="stats">
+    <footer>
+    <p>© 2026 • Rebeca Rávila • Branding & Social Media</p>
+    </footer>
 
-<div class="stat">
-<h3>100%</h3>
-<p>Estratégia personalizada para cada cliente</p>
-</div>
+    <a class="whats" href="https://wa.me/556391297243">💬</a>
 
-<div class="stat">
-<h3>+250</h3>
-<p>Perfis transformados</p>
-</div>
-
-<div class="stat">
-<h3>+5</h3>
-<p>Anos de experiência no mercado</p>
-</div>
-
-<div class="stat">
-<h3>∞</h3>
-<p>Possibilidades para sua marca</p>
-</div>
-
-</div>
-
-</section>
-
-<section class="cta" id="contato">
-<h2>Sua marca merece ser lembrada.</h2>
-<p style="max-width:760px;margin:20px auto 35px">Vamos construir uma presença digital que transmita profissionalismo, gere confiança e converta seguidores em clientes.</p>
-<a class="btn" style="background:#fff;color:#6b1216" target="_blank" href="https://wa.me/556391297243?text=Oi%20Rebeca!%20Quero%20um%20or%C3%A7amento.">Falar comigo</a>
-</section>
-
-<footer>© 2026 • Rebeca Rávila • @rebcaravila</footer>
-
-<a class="whats" target="_blank" href="https://wa.me/556391297243?text=Oi%20Rebeca!">💬</a>
-
-</body>
-</html>
+    </body>
+    </html>
