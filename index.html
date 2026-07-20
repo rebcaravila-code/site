@@ -2,120 +2,113 @@
     <html lang="pt-BR">
     <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rebeca Rávila | Branding & Social Media</title>
-    <meta name="description" content="Branding e Social Media para mulheres empreendedoras.">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Rebeca Rávila</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
     <style>
-    :root{--wine:#6b1216;--bg:#faf7f5;--text:#2b2220;--muted:#655754;--card:#fff;}
+    :root{--wine:#6b1216;--cream:#faf7f4;--beige:#f2ece7;--text:#302826}
     *{margin:0;padding:0;box-sizing:border-box}
     html{scroll-behavior:smooth}
-    body{font-family:Inter,sans-serif;background:linear-gradient(#faf7f5,#f4efeb);color:var(--text);line-height:1.8}
-    header{position:fixed;top:0;width:100%;display:flex;justify-content:space-between;align-items:center;padding:18px 7%;background:rgba(250,247,245,.9);backdrop-filter:blur(16px);box-shadow:0 8px 20px rgba(0,0,0,.05)}
-    .logo{font:700 2rem "Cormorant Garamond",serif;color:var(--wine)}
-    nav a{margin-left:26px;text-decoration:none;color:#333;font-weight:600}
-    section{padding:100px 8%}
-    .hero{display:grid;grid-template-columns:1.1fr .9fr;gap:60px;align-items:center;min-height:100vh}
-    .tag{display:inline-block;background:#ead7d2;color:var(--wine);padding:8px 18px;border-radius:999px}
+    body{font-family:Inter,sans-serif;background:
+    radial-gradient(circle at top right,#efe1dc 0%,transparent 35%),
+    radial-gradient(circle at bottom left,#efe7df 0%,transparent 35%),
+    var(--cream);color:var(--text);line-height:1.8}
+    header{position:fixed;top:18px;left:50%;transform:translateX(-50%);
+    width:92%;padding:14px 20px;background:rgba(255,255,255,.65);
+    backdrop-filter:blur(18px);border-radius:18px;display:flex;
+    justify-content:space-between;align-items:center;z-index:1000}
+    header nav a{text-decoration:none;color:#333;margin-left:18px;font-weight:600}
+    .hero{min-height:100svh;display:flex;flex-direction:column;justify-content:center;align-items:center;padding:110px 8% 40px;text-align:center}
+    .hero img{width:min(92vw,420px);border-radius:28px;box-shadow:0 25px 60px rgba(0,0,0,.12);margin-bottom:28px}
+    .tag{background:#ead7d2;color:var(--wine);padding:8px 18px;border-radius:999px;font-size:.9rem}
     h1,h2{font-family:"Cormorant Garamond",serif}
-    h1{font-size:4rem;margin:24px 0;line-height:1.05}
-    h2{font-size:3rem;color:var(--wine);margin-bottom:24px}
-    p{color:var(--muted);margin-bottom:18px}
-    .btn{display:inline-block;padding:16px 34px;background:var(--wine);color:#fff;border-radius:999px;text-decoration:none;margin-top:18px}
-    img{width:100%;max-width:520px;border-radius:30px;box-shadow:0 20px 45px rgba(0,0,0,.12)}
-    .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:24px}
-    .card{background:#fff;padding:30px;border-radius:22px;box-shadow:0 15px 35px rgba(0,0,0,.08)}
-    details{background:#fff;padding:20px;border-radius:18px;margin:15px 0;box-shadow:0 10px 25px rgba(0,0,0,.06)}
-    summary{font-weight:700;cursor:pointer;color:var(--wine)}
-    .cta{text-align:center;background:var(--wine);color:#fff;border-radius:28px}
+    h1{font-size:clamp(3rem,9vw,5rem);line-height:1}
+    .hero p{max-width:620px;margin:24px auto;color:#6a5d59}
+    .btn{display:inline-block;padding:17px 34px;background:var(--wine);color:#fff;border-radius:999px;text-decoration:none}
+    section{padding:90px 8%}
+    .block{background:#fff;border-radius:30px;padding:40px;box-shadow:0 15px 45px rgba(0,0,0,.06)}
+    .alt{background:var(--beige)}
+    .grid{display:grid;grid-template-columns:1fr;gap:24px;margin-top:30px}
+    .card{background:#fff;padding:28px;border-radius:24px;box-shadow:0 10px 35px rgba(0,0,0,.08)}
+    .card:hover{transform:translateY(-6px);transition:.3s}
+    details{background:#fff;border-radius:20px;padding:20px;margin:16px 0}
+    summary{font-weight:700;color:var(--wine);cursor:pointer}
+    .cta{background:var(--wine);color:#fff;text-align:center;border-radius:30px}
     .cta p{color:#f7eded}
-    footer{text-align:center;padding:40px;color:#777}
-    @media(max-width:900px){.hero{grid-template-columns:1fr;text-align:center}nav{display:none}h1{font-size:2.8rem}}
+    .bottom-bar{position:fixed;bottom:16px;left:50%;transform:translateX(-50%);
+    width:92%;background:#fff;border-radius:18px;padding:12px 18px;
+    display:flex;justify-content:space-around;box-shadow:0 15px 35px rgba(0,0,0,.12)}
+    .bottom-bar a{text-decoration:none;color:var(--wine);font-weight:700}
+    @media(min-width:900px){
+    .hero{display:grid;grid-template-columns:1fr 1fr;text-align:left}
+    .hero div{text-align:left}
+    .grid{grid-template-columns:repeat(2,1fr)}
+    .bottom-bar{display:none}
+    }
     </style>
     </head>
     <body>
+
     <header>
-    <div class="logo">Rebeca Rávila</div>
+    <strong style="font-family:Cormorant Garamond,serif;color:#6b1216;font-size:2rem">Rebeca Rávila</strong>
     <nav>
-    <a href="#sobre">Sobre</a><a href="#servicos">Serviços</a><a href="#faq">FAQ</a><a href="#contato">Contato</a>
+    <a href="#sobre">Sobre</a>
+    <a href="#servicos">Serviços</a>
+    <a href="#faq">FAQ</a>
     </nav>
     </header>
 
     <section class="hero">
     <div>
-    <span class="tag">Branding • Social Media • Posicionamento</span>
-    <h1>Sua marca pode vender antes mesmo da primeira conversa.</h1>
-    <p>Talvez você tenha um excelente serviço. Clientes satisfeitos. Muito esforço. Mas, quando alguém entra no seu Instagram, essa qualidade simplesmente não aparece.</p>
-    <p>Meu trabalho é transformar essa primeira impressão em confiança, autoridade e desejo de comprar.</p>
-    <a class="btn" href="#contato">Quero fortalecer minha marca</a>
+    <span class="tag">Branding • Social Media</span>
+    <h1>Sua marca merece ser lembrada.</h1>
+    <p>Você pode oferecer um excelente serviço e ainda assim passar despercebida. Meu trabalho é fazer com que sua comunicação transmita o mesmo valor que existe dentro da sua empresa.</p>
+    <a class="btn" href="#contato">Quero conversar</a>
     </div>
     <img src="sua-foto.jpeg" alt="Rebeca Rávila">
     </section>
 
     <section id="sobre">
+    <div class="block">
     <h2>Quem está por trás da marca?</h2>
-    <p>Você provavelmente já percebeu que existem milhares de perfis bonitos no Instagram, mas poucos realmente conseguem transmitir confiança. Foi exatamente isso que despertou minha paixão pelo branding.</p>
-    <p>Meu nome é <strong>Rebeca Rávila</strong> e acredito que uma marca nunca começa pelo logotipo. Ela começa pela história, pelos valores, pelo propósito e pela forma como faz as pessoas se sentirem.</p>
-    <p>Meu trabalho não é apenas criar posts bonitos. É descobrir aquilo que torna a sua empresa única e transformar isso em uma comunicação capaz de despertar confiança, admiração e lembrança.</p>
-    </section>
-
-    <section id="servicos">
-    <h2>Como posso ajudar sua marca</h2>
-    <div class="cards">
-    <div class="card"><h3>Branding</h3><p>Construção de posicionamento, identidade e percepção de valor.</p></div>
-    <div class="card"><h3>Gestão de Instagram</h3><p>Planejamento, design, estratégia, calendário e acompanhamento.</p></div>
-    <div class="card"><h3>Consultoria</h3><p>Encontros estratégicos para empresas que desejam crescer com direção.</p></div>
-    <div class="card"><h3>Remodelação de Perfil</h3><p>Transformação completa da presença digital da sua marca.</p></div>
+    <p>Existem milhares de perfis bonitos. Poucos conseguem transmitir confiança. Foi por acreditar que comunicação vai muito além da estética que escolhi trabalhar com Branding e Social Media. Antes de criar qualquer arte, procuro entender a história da sua empresa, seus valores e o que faz sua marca ser única.</p>
+    <p>Mais do que entregar um feed bonito, quero construir uma presença que faça as pessoas lembrarem de você.</p>
     </div>
     </section>
 
-    <section>
-    <h2>Antes de criar conteúdo...</h2>
-    <p>Eu quero entender sua empresa, seus objetivos, seu momento e quem você deseja alcançar. Só depois disso a estratégia começa a ganhar forma. Nada aqui é feito com fórmulas prontas ou modelos genéricos.</p>
+    <section class="alt" id="servicos">
+    <h2 style="text-align:center;margin-bottom:20px">Como posso ajudar</h2>
+    <div class="grid">
+    <div class="card"><h3>Branding</h3><p>Posicionamento, identidade visual, tom de voz e estratégia.</p></div>
+    <div class="card"><h3>Gestão de Instagram</h3><p>Planejamento, criação de conteúdo, acompanhamento e crescimento.</p></div>
+    <div class="card"><h3>Consultoria</h3><p>Orientação personalizada para empresas que desejam evoluir.</p></div>
+    <div class="card"><h3>Remodelação</h3><p>Transformação completa do seu perfil profissional.</p></div>
+    </div>
     </section>
 
     <section id="faq">
     <h2>Perguntas frequentes</h2>
-
-    <details>
-    <summary>Você cria apenas posts para Instagram?</summary>
-    <p>Não. Os posts são apenas uma consequência da estratégia. Antes de qualquer publicação, analiso seu posicionamento, identidade visual, linguagem, diferenciais, objetivos e comportamento do público. Assim, cada conteúdo passa a comunicar valor e não apenas preencher o feed.</p>
-    </details>
-
-    <details>
-    <summary>Minha empresa ainda é pequena. Vale a pena investir?</summary>
-    <p>Sim. Empresas menores têm ainda mais a ganhar com um posicionamento consistente. Construir uma marca forte desde o início evita retrabalho, fortalece sua autoridade e faz com que seus clientes enxerguem valor antes mesmo de conhecer seus preços.</p>
-    </details>
-
-    <details>
-    <summary>Você atende somente empresas da área da beleza?</summary>
-    <p>Não. Embora eu tenha experiência nesse segmento, atendo diferentes nichos. Cada projeto é desenvolvido de forma personalizada para refletir a essência e os objetivos da marca.</p>
-    </details>
-
-    <details>
-    <summary>Como funciona o processo?</summary>
-    <p>Tudo começa com uma conversa. Quero entender sua empresa, seus desafios e onde você deseja chegar. Depois disso desenvolvo uma estratégia personalizada, apresento um plano de ação e iniciamos a construção da comunicação da sua marca.</p>
-    </details>
-
-    <details>
-    <summary>Em quanto tempo aparecem os resultados?</summary>
-    <p>O fortalecimento de uma marca acontece de forma contínua. Muitas clientes percebem mudanças nas primeiras semanas, principalmente na forma como são percebidas pelo público. Resultados comerciais tendem a crescer conforme a estratégia é aplicada com consistência.</p>
-    </details>
-
-    <details>
-    <summary>Posso contratar apenas identidade visual?</summary>
-    <p>Sim. Também desenvolvo projetos exclusivos de identidade visual e branding para empresas que desejam reposicionar sua marca sem contratar a gestão mensal.</p>
-    </details>
+    <details><summary>Você faz apenas posts?</summary><p>Não. Todo conteúdo nasce de uma estratégia. Analiso posicionamento, público, diferenciais, identidade visual e objetivos antes de criar qualquer publicação.</p></details>
+    <details><summary>Minha empresa é pequena. Vale a pena?</summary><p>Sim. Um posicionamento forte desde o início ajuda sua marca a transmitir profissionalismo, conquistar confiança e crescer com mais consistência.</p></details>
+    <details><summary>Como funciona o atendimento?</summary><p>Começamos com uma conversa para entender sua realidade. Depois apresento uma estratégia personalizada e desenvolvemos a comunicação da sua marca de forma alinhada aos seus objetivos.</p></details>
+    <details><summary>Posso contratar somente identidade visual?</summary><p>Sim. Também desenvolvo projetos exclusivos de branding e identidade visual.</p></details>
     </section>
 
-    <section class="cta" id="contato">
-    <h2>Vamos construir uma marca que as pessoas lembrem.</h2>
-    <p>Se você acredita que sua empresa merece transmitir mais valor, será um prazer conhecer sua história.</p>
-    <a class="btn" style="background:#fff;color:#6b1216" href="#">Conversar no WhatsApp</a>
+    <section id="contato">
+    <div class="cta block">
+    <h2>Vamos construir uma marca que encante antes mesmo da primeira conversa.</h2>
+    <p>Será um prazer conhecer sua história e pensar em uma estratégia feita para o seu negócio.</p>
+    <p><a class="btn" href="#">Falar no WhatsApp</a></p>
+    </div>
     </section>
 
-    <footer>© 2026 • Rebeca Rávila • Branding & Social Media</footer>
+    <div class="bottom-bar">
+    <a href="#">Início</a>
+    <a href="#">Instagram</a>
+    <a href="#">WhatsApp</a>
+    </div>
+
     </body>
     </html>
